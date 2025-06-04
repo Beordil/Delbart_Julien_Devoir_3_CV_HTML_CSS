@@ -1,4 +1,6 @@
-/* Importation des polices Raleway via @font-face */
+/* ------------------------- */
+/* IMPORTATION DES POLICES  */
+/* ------------------------- */
 @font-face {
   font-family: 'Raleway';
   src: url('../Fonts/Raleway-Regular.woff2') format('woff2'),
@@ -23,6 +25,9 @@
   font-style: normal;
 }
 
+/* ------------------------- */
+/* VARIABLES DE COULEUR     */
+/* ------------------------- */
 :root {
   --bleu: #17abb3;
   --gris-fonce: #333333;
@@ -31,6 +36,9 @@
   --blanc: #ffffff;
 }
 
+/* ------------------------- */
+/* RÉGLAGES GÉNÉRAUX         */
+/* ------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -51,6 +59,9 @@ h1, h2, h3, h4 {
   font-family: 'Lato', sans-serif;
 }
 
+/* ------------------------- */
+/* CONTAINER PRINCIPAL       */
+/* ------------------------- */
 .cv-container {
   width: 1160px;
   background-color: var(--blanc);
@@ -59,6 +70,9 @@ h1, h2, h3, h4 {
   min-height: 100vh;
 }
 
+/* ------------------------- */
+/* HEADER                    */
+/* ------------------------- */
 header {
   background-color: var(--bleu);
   color: var(--blanc);
@@ -144,12 +158,18 @@ header {
   text-decoration: underline;
 }
 
+/* ------------------------- */
+/* CONTENU PRINCIPAL         */
+/* ------------------------- */
 .cv-content {
   display: flex;
   flex: 1;
   align-items: stretch;
 }
 
+/* ------------------------- */
+/* SIDEBAR                   */
+/* ------------------------- */
 .cv-sidebar {
   width: 30%;
   background-color: var(--gris-clair);
@@ -159,10 +179,13 @@ header {
   text-align: left;
 }
 
+/* ------------------------- */
+/* SECTION CENTRALE (MAIN)   */
+/* ------------------------- */
 .cv-main {
   width: 70%;
   text-align: left;
-  padding: 40px 20px 0 20px; /* Espace haut ajouté */
+  padding: 40px 20px 0 20px;
 }
 
 .cv-main section {
@@ -181,12 +204,25 @@ header {
   text-indent: 2em;
 }
 
+/* ------------------------- */
+/* BLOCS FORMATIONS, STAGES, EXPERIENCES */
+/* ------------------------- */
 .formation, .experience, .stage {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--gris-clair);
   margin-bottom: 10px;
+}
+
+/* Effets de survol */
+.formation:hover,
+.stage:hover,
+.experience:hover {
+  border-left: 5px solid var(--bleu);
+  background-color: var(--gris-clair);
+  transition: all 0.3s ease;
+  padding-left: 15px;
 }
 
 /* Dates à droite en bleu */
@@ -202,6 +238,9 @@ header {
   flex-direction: column;
 }
 
+/* ------------------------- */
+/* PIED DE PAGE              */
+/* ------------------------- */
 .footer-bottom {
   width: 100%;
   background-color: var(--bleu);
@@ -236,6 +275,9 @@ header {
   margin: 0;
 }
 
+/* ------------------------- */
+/* ÉLÉMENTS DE LA SIDEBAR    */
+/* ------------------------- */
 .section-title {
   color: var(--bleu);
   margin-top: 20px;
@@ -295,6 +337,9 @@ header {
   display: inline-block;
 }
 
+/* ------------------------- */
+/* RESPONSIVE DESIGN         */
+/* ------------------------- */
 @media (max-width: 768px) {
   .cv-container {
     width: 100%;
