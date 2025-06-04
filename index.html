@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Julien Delbart - CV Développeur Web</title>
-  <link rel="stylesheet" href="./Assets/Styles/style.css" />
-  <!-- Lato via Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
-</head>
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Julien Delbart | Développeur Web et Web Mobile</title>
+
+
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="./Assets/Styles/style.css" />
+
+    <!-- Police Lato pour les titres -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- SEO : balises meta -->
+    <meta name="description" content="CV de Julien Delbart, développeur web et web mobile. Découvrez ses compétences, formations et expériences professionnelles.">
+    <meta name="author" content="Julien Delbart">
+    <meta name="keywords" content="Julien Delbart, développeur web, développeur web mobile, CV, HTML, CSS, JavaScript, portfolio, front-end, Tergnier, formation développeur, alternance développeur, emploi web">
+    <meta name="robots" content="index, follow">
+    </head>
+    
 <body>
   <div class="cv-container">
+    
+    <!-- En-tête avec photo, nom, titre et contacts -->
     <header>
       <div class="header-wrapper">
         <div class="header-left">
@@ -30,8 +43,10 @@
       </div>
     </header>
 
+    <!-- Contenu principal avec sidebar + sections -->
     <main class="cv-content">
-      <!-- SIDEBAR -->
+
+      <!-- Barre latérale gauche -->
       <aside class="cv-sidebar">
         <h3 class="section-title">Compétences</h3>
         <div class="skill"><span><strong>HTML</strong></span><span class="stars">★★★★☆</span></div>
@@ -62,8 +77,10 @@
         </ul>
       </aside>
 
-      <!-- CONTENU PRINCIPAL -->
+      <!-- Section principale droite -->
       <section class="cv-main">
+        
+        <!-- Bloc Profil -->
         <section class="profil">
           <h3>Profil</h3>
           <p>
@@ -71,6 +88,7 @@
           </p>
         </section>
 
+        <!-- Bloc Formations -->
         <section class="formations">
           <h3>Formations</h3>
           <div class="formation">
@@ -87,6 +105,7 @@
           </div>
         </section>
 
+        <!-- Bloc Stages -->
         <section class="stages">
           <h3>Stages</h3>
           <div class="stage">
@@ -96,6 +115,7 @@
           </div>
         </section>
 
+        <!-- Bloc Expériences -->
         <section class="experiences">
           <h3>Expériences professionnelles</h3>
           <div class="experience">
@@ -106,23 +126,31 @@
           </div>
           <div class="experience">
             <div>
+              <h4>Commis de Cuisine</h4>
+            </div>
+            <p>2023 - 2024</p>
+          </div>
+          <div class="experience">
+            <div>
               <h4>Technicien informatique</h4>
             </div>
             <p>2021 – 2022</p>
           </div>
         </section>
+
       </section>
     </main>
 
-    <!-- FOOTER COLLE AU BORD DU CV -->
+    <!-- Pied de page avec liens sociaux -->
     <footer class="footer-bottom">
       <ul>
         <li><a href="#"><img src="./Assets/img/linkedin_logo.png" alt="LinkedIn" /></a></li>
-        <li><a href="https://github.com/Beordil"><img src="./Assets/img/github-mark.png" alt="GitHub" /></a></li>
+        <li><a href="https://github.com/Beordil" target="_blank" rel="noopener noreferrer"><img src="./Assets/img/github-mark.png" alt="GitHub" /></a></li>
         <li><a href="#"><img src="./Assets/img/logo X.jpg" alt="X" /></a></li>
       </ul>
       <p>Mis à jour le : 04/06/2025</p>
     </footer>
+
   </div>
 </body>
 </html>
