@@ -1,3 +1,28 @@
+/* Importation des polices Raleway via @font-face */
+@font-face {
+  font-family: 'Raleway';
+  src: url('../Fonts/Raleway-Regular.woff2') format('woff2'),
+       url('../Fonts/Raleway-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../Fonts/Raleway-Italic.woff2') format('woff2'),
+       url('../Fonts/Raleway-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../Fonts/Raleway-Bold.woff2') format('woff2'),
+       url('../Fonts/Raleway-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   --bleu: #17abb3;
   --gris-fonce: #333333;
@@ -10,7 +35,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -19,6 +43,12 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Lato', sans-serif;
 }
 
 .cv-container {
@@ -72,7 +102,6 @@ header {
 
 .header-right h1 {
   font-size: 2rem;
-  font-family: 'Lato', sans-serif;
   margin-bottom: 5px;
 }
 
@@ -127,10 +156,13 @@ header {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .cv-main {
   width: 70%;
+  text-align: left;
+  padding: 40px 20px 0 20px; /* Espace haut ajouté */
 }
 
 .cv-main section {
@@ -139,7 +171,7 @@ header {
 
 .cv-main h3 {
   color: var(--bleu);
-  border-bottom: 2px solid var(--bleu);
+  border-bottom: 2px solid var(--gris-clair);
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
@@ -149,13 +181,25 @@ header {
   text-indent: 2em;
 }
 
-.formation:hover,
-.stage:hover,
-.experience:hover {
-  background-color: var(--gris-tres-clair);
-  border-left: 4px solid var(--bleu);
-  padding-left: 10px;
-  transition: all 0.3s ease;
+.formation, .experience, .stage {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--gris-clair);
+  margin-bottom: 10px;
+}
+
+/* Dates à droite en bleu */
+.formation p:last-child,
+.experience p:last-child,
+.stage p:last-child {
+  color: var(--bleu);
+  font-weight: bold;
+}
+
+.formation div, .experience div, .stage div {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-bottom {
@@ -192,19 +236,20 @@ header {
   margin: 0;
 }
 
-/* Sidebar : compétences, langues, qualités */
 .section-title {
   color: var(--bleu);
   margin-top: 20px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--gris-clair);
   padding-bottom: 5px;
+  text-align: left;
 }
 
 .skill {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
+  text-align: left;
 }
 
 .stars {
@@ -215,18 +260,22 @@ header {
   list-style: none;
   padding: 0;
   margin: 0 0 20px 0;
+  text-align: left;
 }
 
 .languages li {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
+  text-align: left;
+  width: 100%;
 }
 
 .listed {
   list-style: none;
   padding-left: 0;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .listed li {
@@ -246,7 +295,6 @@ header {
   display: inline-block;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .cv-container {
     width: 100%;
