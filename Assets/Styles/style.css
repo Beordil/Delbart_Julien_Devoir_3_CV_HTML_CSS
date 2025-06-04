@@ -1,0 +1,137 @@
+
+/* Palette de couleurs */
+:root {
+    --bleu: #17abb3;
+    --gris-fonce: #333333;
+    --gris-clair: #e3e3e3;
+    --gris-tres-clair: #f5f5f5;
+    --blanc: #ffffff;
+}
+
+/* Général */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: var(--gris-tres-clair);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.cv-container {
+    width: 1160px;
+    background-color: var(--blanc);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    background-color: var(--bleu);
+    color: var(--blanc);
+    text-align: center;
+    padding: 20px;
+}
+
+header .photo-profil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--blanc);
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+header .photo-profil:hover {
+    opacity: 0.9;
+}
+
+header h1, header h2 {
+    font-family: 'Lato', sans-serif;
+    margin-top: 10px;
+}
+
+.contact p a {
+    color: var(--blanc);
+    text-decoration: none;
+}
+
+/* Layout principal */
+.cv-content {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Sidebar */
+.cv-sidebar {
+    width: 30%;
+    background-color: var(--gris-clair);
+    padding: 20px;
+}
+
+/* Main */
+.cv-main {
+    width: 70%;
+}
+
+/* Sections */
+.cv-main section {
+    margin-bottom: 30px;
+}
+
+.cv-main h3 {
+    color: var(--bleu);
+    border-bottom: 2px solid var(--bleu);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Texte Profil */
+.profil p {
+    text-align: justify;
+    text-indent: 2em;
+}
+
+/* Hover effet pour formations, stages, expériences */
+.formation:hover,
+.stage:hover,
+.experience:hover {
+    background-color: var(--gris-tres-clair);
+    border-left: 4px solid var(--bleu);
+    padding-left: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Réseaux sociaux */
+.liens ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+.liens ul li img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.liens ul li img:hover {
+    opacity: 0.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--gris-fonce);
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
